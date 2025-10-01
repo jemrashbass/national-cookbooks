@@ -1,0 +1,31 @@
+# OS / Editor junk
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Node / package managers (if you later add build tools)
+node_modules/
+dist/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python (if you use export scripts in Python)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.env
+.venv
+
+# Data exports (optional – keep master CSVs, ignore big generated files)
+data/*.json
+!data/national_cookbooks_master.csv
+!data/cookbook_relationships.csv
+
+# Logs
+*.log
+
