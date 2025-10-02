@@ -1,5 +1,37 @@
 id,title,author,year,country,city,latitude,longitude,language,notes,sources,cover_image_url,influence_tags,timeline_display,graph_node_type
-IT_1891_ARTUSI,La scienza in cucina e l’arte di mangiar bene,Pellegrino Artusi,1891,Italy,Florence,43.7696,11.2558,Italian,Often credited with stitching together a national Italian cuisine after unification; hugely popular.,Atlas Obscura; memoriediangelina.com,,household;codification,True,cookbook
-IT_1929_BONI,Il talismano della felicità,Ada Boni,1929,Italy,Rome,41.9028,12.4964,Italian,20th-century household staple; defining compendium for Italian home cooks.,Wikipedia,,household;compendium,True,cookbook
-FR_1903_ESCOFFIER,Le Guide Culinaire,Auguste Escoffier,1903,France,Paris,48.8566,2.3522,French,Codified classical French haute cuisine; adopted as professional standard.,AbeBooks,,professional;codification,True,cookbook
-ES_1972_ORTEGA,1080 recetas de cocina,Simone Ortega; Inés Ortega,1972,Spain,Madrid,40.4168,-3.7038,Spanish,"Mass-market Spanish 'bible' of home cooking; millions sold, household standard.",Wikipedia,,household;compendium,True,cookbook
+UN_1896_FARMER,The Boston Cooking-School Cook Book,Fannie Merritt Farmer,1896,United States,Boston,42.3601,-71.0589,,Standardized level measurements; textbook impact,,,,yes,cookbook
+IT_1891_ARTUSI,La scienza in cucina e l’arte di mangiar bene,Pellegrino Artusi,1891,Italy,Florence,43.7696,11.2558,,Post-Risorgimento unification of Italian cuisine,,,,yes,cookbook
+FR_1903_ESCOFFIER,Le Guide Culinaire,Auguste Escoffier,1903,France,Paris,48.8566,2.3522,,Codified French haute cuisine as professional standard,,,,yes,cookbook
+UN_1950_DAVID,A Book of Mediterranean Food,Elizabeth David,1950,United Kingdom,London,51.5074,-0.1278,,Opened British eyes to Mediterranean food postwar,,,,yes,cookbook
+UN_1960_DAVID,French Provincial Cooking,Elizabeth David,1960,United Kingdom,London,51.5074,-0.1278,,Cemented her as Britain’s culinary prose authority,,,,yes,cookbook
+UN_1961_BERTHOLLE,Mastering the Art of French Cooking,"Julia Child, Simone Beck & Louisette Bertholle",1961,United States,Cambridge MA,42.3736,-71.1097,,Made French cuisine approachable; huge bestseller,,,,yes,cookbook
+IT_1929_BONI,Il talismano della felicità,Ada Boni,1929,Italy,Rome,41.9028,12.4964,,Defining compendium for Italian home cooks,,,,yes,cookbook
+SP_1972_ORTEGA,1080 recetas de cocina,Simone & Inés Ortega,1972,Spain,Madrid,40.4168,-3.7038,,Spanish household bible; millions sold,,,,yes,cookbook
+PO_1946_ROSA-LIMPO,O Livro de Pantagruel,Bertha Rosa-Limpo,1946,Portugal,Lisbon,38.7169,-9.139,,Canonical Portuguese home reference,,,,yes,cookbook
+UN_1978_SMITH,Delia Smith’s Complete Cookery Course,Delia Smith,1978,United Kingdom,London,51.5074,-0.1278,,"No-nonsense step-by-step, hugely trusted",,,,yes,cookbook
+UN_1984_HOM,Chinese Cookery,Ken Hom,1984,United Kingdom,London,51.5074,-0.1278,,Introduced authentic Chinese food via BBC tie-in,,,,yes,cookbook
+UN_1931_ROMBAUER,Joy of Cooking,Irma S. Rombauer,1931,United States,St. Louis,38.627,-90.1994,,Everyday American reference; continuously revised,,,,yes,cookbook
+UN_1982_LUKINS,The Silver Palate Cookbook,Rosso & Lukins,1982,United States,New York,40.7128,-74.006,,Trendy but foundational for dinner parties,,,,yes,cookbook
+GE_1911_OETKER,Dr. Oetker Schul-Kochbuch,Dr. August Oetker,1911,Germany,Bielefeld,52.0302,8.5325,,School/home-economics mainstay for generations,,,,yes,cookbook
+SW_1951_PROVKÖK,Vår kokbok,KF Provkök,1951,Sweden,Stockholm,59.3293,18.0686,,Best-selling Swedish household standard,,,,yes,cookbook
+JA_1980_TSUJI,Japanese Cooking: A Simple Art,Shizuo Tsuji,1980,Japan,Tokyo,35.6895,139.6917,,Authoritative Japanese-English cookbook,,,,yes,cookbook
+IN_1997_DESHPANDE,The Indian Spice Bible,Tara Deshpande,1997,India,Delhi,28.6139,77.209,,Detailed spice compendium,,,,yes,cookbook
+IN_1993_PRABAKARAN,Usha’s Pickle Digest,Usha Prabakaran,1993,India,Hyderabad,17.385,78.4867,,Household staple for pickling,,,,yes,cookbook
+UN_1861_BEETON,The Book of Household Management,Isabella Beeton,1861,United Kingdom,London,51.5074,-0.1278,,Victorian hegemonic manual of domesticity,,,,yes,cookbook
+UN_1747_GLASSE,The Art of Cookery Made Plain and Easy,Hannah Glasse,1747,United Kingdom,London,51.5074,-0.1278,,"Dominated Anglophone market, plain English canon",,,,yes,cookbook
+AU_1858_PRATO,Die Süddeutsche Küche (Prato),Katharina Prato,1858,Austria,Vienna,48.21,16.37,,Classic Austrian household cookbook,,,,yes,cookbook
+NE_1910_WANNÉE,Kookboek van de Amsterdamsche Huishoudschool,C. J. Wannée,1910,Netherlands,Amsterdam,52.3676,4.9041,,Dutch household school reference,,,,yes,cookbook
+BE_1927_KVLV,Ons Kookboek,KVLV,1927,Belgium,Leuven,50.8798,4.7005,,Culinary bible of Flanders; wedding gift tradition,,,,yes,cookbook
+FI_1908_KRANK,Kotiruoka: Keittokirja kotia ja koulua varten,"Reinilä, Calonius & Krank",1908,Finland,Helsinki,60.1699,24.9384,,School/home staple shaping Finnish tastes,,,,yes,cookbook
+RU_1861_MOLOKHOVETS,A Gift to Young Housewives,Elena Molokhovets,1861,Russia,St. Petersburg,59.9343,30.3351,,Pre-revolution domestic bible,,,,yes,cookbook
+SO_1939_(USSR),The Book of Tasty and Healthy Food,Institute of Nutrition (USSR),1939,Soviet Union,Moscow,55.7558,37.6176,,State-driven Soviet cuisine project,,,,yes,cookbook
+UN_1950_MILLS,Betty Crocker’s Picture Cook Book,General Mills,1950,United States,Minneapolis,44.9778,-93.265,,Corporate best-seller shaping domestic ideals,,,,yes,cookbook
+NE_1950_FARMERS,Edmonds Cookery Book,NZ Women’s Division of Federated Farmers,1950,New Zealand,Christchurch,-43.5321,172.6362,,Every Kiwi kitchen staple,,,,yes,cookbook
+BR_1940_NACIONAL,Dona Benta: Comer Bem,Multiple / Companhia Editora Nacional,1940,Brazil,São Paulo,-23.5505,-46.6333,,Brazilian household staple,,,,yes,cookbook
+ME_1955_LEÓN,Cocina mexicana,Josefina Velázquez de León,1955,Mexico,Mexico City,19.4326,-99.1332,,Radio + print shaped Mexican cuisine,,,,yes,cookbook
+NO_1967_HOVIG,Den rutete kokeboken,Ingrid Espelid Hovig,1967,Norway,Oslo,59.9139,10.7522,,"Over 600,000 copies, Norwegian staple",,,,yes,cookbook
+AU_1968_FULTON,The Margaret Fulton Cookbook,Margaret Fulton,1968,Australia,Sydney,-33.8688,151.2093,,Taught generations of Australians modern cookery,,,,yes,cookbook
+UN_1968_RODEN,A Book of Middle Eastern Food,Claudia Roden,1968,United Kingdom,London,51.5074,-0.1278,,Introduced Levantine/Mediterranean food,,,,yes,cookbook
+UN_1973_HAZAN,The Classic Italian Cook Book,Marcella Hazan,1973,United States,New York,40.7128,-74.006,,Authentic Italian voice in English,,,,yes,cookbook
+UN_1973_JAFFREY,An Invitation to Indian Cooking,Madhur Jaffrey,1973,United States,New York,40.7128,-74.006,,Introduced Indian cooking to Anglo-American kitchens,,,,yes,cookbook
+FR_1969_POINT,Ma Gastronomie,Fernand Point,1969,France,Vienne,45.516,4.8741,,"Chef’s bible, influenced nouvelle cuisine",,,,yes,cookbook
