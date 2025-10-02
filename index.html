@@ -55,10 +55,14 @@
     }
 
     function getColor(tags) {
-      if (!tags) return colorMap["default"];
-      const key = tags.split(";")[0].trim().toLowerCase();
-      return colorMap[key] || colorMap["default"];
-    }
+  if (!tags) return colorMap["default"];
+  const parts = tags.split(";").map(t => t.trim().toLowerCase());
+  for (let p of parts) {
+    if (colorMap[p]) return colorMap[p];
+  }
+  return colorMap["default"];
+}
+
 
     function createMarker(row, lat, lng) {
       const marker = new google.maps.Marker({
