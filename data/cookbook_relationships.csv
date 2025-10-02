@@ -1,4 +1,4 @@
 source_id,target_id,relationship,weight,notes
-# sample row
-# IT_1891_ARTUSI,FR_1903_ESCOFFIER,influenced,5,"Artusi’s codification 
-paralleled Escoffier’s in France"
+IT_1891_ARTUSI,IT_1929_BONI,influenced,5,Ada Boni’s compendium builds on Artusi’s national unification of cuisine
+FR_1903_ESCOFFIER,ES_1972_ORTEGA,influenced,3,Escoffier’s codification echoed in Ortega’s Spanish household bible
+IT_1891_ARTUSI,FR_1903_ESCOFFIER,parallel,2,Artusi and Escoffier as contemporaries codifying national cuisines

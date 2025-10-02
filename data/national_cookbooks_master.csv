@@ -1,7 +1,5 @@
 id,title,author,year,country,city,latitude,longitude,language,notes,sources,cover_image_url,influence_tags,timeline_display,graph_node_type
-# sample row
-# IT_1891_ARTUSI,"La scienza in cucina e l’arte di mangiar 
-bene","Pellegrino 
-Artusi",1891,Italy,Florence,43.7696,11.2558,Italian,"Unified Italian 
-cuisine after unification","Atlas 
-Obscura","",household;codification,true,cookbook
+IT_1891_ARTUSI,La scienza in cucina e l’arte di mangiar bene,Pellegrino Artusi,1891,Italy,Florence,43.7696,11.2558,Italian,Often credited with stitching together a national Italian cuisine after unification; hugely popular.,Atlas Obscura; memoriediangelina.com,,household;codification,True,cookbook
+IT_1929_BONI,Il talismano della felicità,Ada Boni,1929,Italy,Rome,41.9028,12.4964,Italian,20th-century household staple; defining compendium for Italian home cooks.,Wikipedia,,household;compendium,True,cookbook
+FR_1903_ESCOFFIER,Le Guide Culinaire,Auguste Escoffier,1903,France,Paris,48.8566,2.3522,French,Codified classical French haute cuisine; adopted as professional standard.,AbeBooks,,professional;codification,True,cookbook
+ES_1972_ORTEGA,1080 recetas de cocina,Simone Ortega; Inés Ortega,1972,Spain,Madrid,40.4168,-3.7038,Spanish,"Mass-market Spanish 'bible' of home cooking; millions sold, household standard.",Wikipedia,,household;compendium,True,cookbook

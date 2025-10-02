@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>National Cookbooks Map</title>
+  <style>
+    html, body, #map {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <!-- PapaParse for CSV loading -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <div id="map"></div>
+
+  <script>
+    let map;
+
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 2,
+        center: { lat: 20, lng: 0 },
+      });
+
+      // Load and parse CSV from /data folder
+      Papa.parse("data/national_cookbooks_master.csv", {
+        download: true,
+        header: true,
+        complete: function(results) {
+          results.data.forEach(row => {
+            const lat = parseFloat(row.latitude);
+            const lng = parseFloat(row.longitude);
+            if (!isNaN(lat) && !isNaN(lng)) {
+              const marker = new google.maps.Marker({
+                position: { lat, lng },
+                map,
+                title: row.title || row.book || "Cookbook",
+              });
+
+              // Optional: simple info window with more details
+              const info = new google.maps.InfoWindow({
+                content: `
+                  <strong>${row.title || row.book || "Cookbook"}</strong><br/>
+                  ${row.author || ""} (${row.year || ""})<br/>
+                  ${row.city || ""}, ${row.country || ""}
+                `
+              });
+              marker.addListener("click", () => info.open(map, marker));
+            }
+          });
+        }
+      });
+    }
+  </script>
+
+  <!-- Replace YOUR_API_KEY with your actual key -->
+  <script async
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuqqCBYfo-xsGFQizUewcW88UeWQLAtGU&callback=initMap">
+  </script>
+</body>
+</html>
