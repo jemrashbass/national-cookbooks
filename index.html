@@ -18,6 +18,17 @@
 
   <script>
     let map;
+    let colorMap = {};
+
+    // Load colors first, then init map
+    function loadColors() {
+      fetch("config/influence_colors.json")
+        .then(res => res.json())
+        .then(data => {
+          colorMap = data;
+          initMap();
+        });
+    }
 
     function initMap() {
       map = new google.maps.Map(document.getElementById("map"), {
@@ -25,8 +36,8 @@
         center: { lat: 20, lng: 0 },
       });
 
-      // Load and parse CSV from /data folder
-      Papa.parse("data/national_cookbooks_master.csv", {
+      // Load the CSV with coordinates
+      Papa.parse("data/national_cookbooks_master_data_coords_complete_final.csv", {
         download: true,
         header: true,
         complete: function(results) {
@@ -34,31 +45,70 @@
             const lat = parseFloat(row.latitude);
             const lng = parseFloat(row.longitude);
             if (!isNaN(lat) && !isNaN(lng)) {
-              const marker = new google.maps.Marker({
-                position: { lat, lng },
-                map,
-                title: row.title || row.book || "Cookbook",
-              });
-
-              // Optional: simple info window with more details
-              const info = new google.maps.InfoWindow({
-                content: `
-                  <strong>${row.title || row.book || "Cookbook"}</strong><br/>
-                  ${row.author || ""} (${row.year || ""})<br/>
-                  ${row.city || ""}, ${row.country || ""}
-                `
-              });
-              marker.addListener("click", () => info.open(map, marker));
+              createMarker(row, lat, lng);
             }
           });
         }
       });
+
+      addLegend(map);
+    }
+
+    function getColor(tags) {
+      if (!tags) return colorMap["default"];
+      const key = tags.split(";")[0].trim().toLowerCase();
+      return colorMap[key] || colorMap["default"];
+    }
+
+    function createMarker(row, lat, lng) {
+      const marker = new google.maps.Marker({
+        position: { lat, lng },
+        map,
+        title: row.title || "Cookbook",
+        icon: {
+          path: google.maps.SymbolPath.CIRCLE,
+          scale: 6,
+          fillColor: getColor(row.influence_tags),
+          fillOpacity: 0.9,
+          strokeWeight: 1,
+          strokeColor: "#333"
+        }
+      });
+
+      const info = new google.maps.InfoWindow({
+        content: `
+          <strong>${row.title || "Cookbook"}</strong><br/>
+          ${row.author || ""} (${row.year || ""})<br/>
+          ${row.city || ""}, ${row.country || ""}<br/>
+          <small>${row.notes || ""}</small>
+        `
+      });
+
+      marker.addListener("click", () => info.open(map, marker));
+    }
+
+    function addLegend(map) {
+      const legend = document.createElement('div');
+      legend.style.background = 'white';
+      legend.style.padding = '10px';
+      legend.style.margin = '10px';
+      legend.style.border = '1px solid #ccc';
+      legend.innerHTML = `
+        <strong>Legend</strong><br>
+        <span style="color:${colorMap.household}">●</span> Household<br>
+        <span style="color:${colorMap.compendium}">●</span> Compendium<br>
+        <span style="color:${colorMap.professional}">●</span> Professional<br>
+        <span style="color:${colorMap.codification}">●</span> Codification<br>
+        <span style="color:${colorMap.translation}">●</span> Translation/Adaptation<br>
+        <span style="color:${colorMap.renaissance}">●</span> Renaissance/Historical<br>
+      `;
+      map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
     }
   </script>
 
-  <!-- Replace YOUR_API_KEY with your actual key -->
+  <!-- Replace YOUR_API_KEY with your restricted Google Maps key -->
   <script async
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuqqCBYfo-xsGFQizUewcW88UeWQLAtGU&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=loadColors">
   </script>
 </body>
 </html>
